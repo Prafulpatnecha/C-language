@@ -3,7 +3,6 @@
 
 void main()
 {
-//	4. WAP to print the multiplication table of each element of the array.
 
 	int n;
 	printf("Enter The Value Array Size Of N : ");
