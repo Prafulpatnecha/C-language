@@ -10,9 +10,11 @@ void gma()
 	printf("\nEnter Your Eamil Id : ");
 	gets(gmai);
 	
+//	pas();
+	
 	int ck=0,i,j,len,l=strlen(gmai);
 	
-	if(l>7 && l<32)
+	if(l>13 && l<32)
 	{
 		len=l-10;
 		
@@ -71,7 +73,7 @@ void gma()
 	}
 	else
 	{
-		printf("Please Enter 7 to 32 Character!!");
+		printf("Please Enter Character!!");
 		goto start;
 	}
 }
