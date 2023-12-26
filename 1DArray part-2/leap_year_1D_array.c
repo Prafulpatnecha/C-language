@@ -3,21 +3,25 @@
 
 void main()
 {
-	int array[7];
-	int i=0,year,toyear,j=0;
-	printf("Limit Only Six! Value : Ex. 2000 to 2020 Leap Year \n");
-	printf("Enter First Leap Year : ");
-	scanf("%d",&year);
-	printf("Enter Second Leap Year : ");
-	scanf("%d",&toyear);
-	int x=toyear-year;
-	x/=2;
-//	printf("%d",x);
-	for(i=1; i<x; i++)
+	int n=0,i,b,c,s;
+	printf("Enter First Year : ");
+	scanf("%d",&b);
+	printf("Enter 2cand Year : ");
+	scanf("%d",&c);
+	for(i=b; i<=c; i++)
 	{
-		array[i]=year+j;
-		printf("%d ",array[i]);
-		j+=4;
+		n++;
+	}
+	int a[n];
+	n=0;
+	for(i=b; i<=c; i++)
+	{
+		if(i%4==0)
+		{
+			a[n]=i;
+			printf("%d \n",a[n]);
+		}
+		n++;
 	}
 }
 //Q.2 Write a Program to find leap years between two given numbers and store them in an array. And then print that array. Make this program in the shortest memory.
