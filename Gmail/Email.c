@@ -15,7 +15,7 @@ void gma()
 	
 	int ck=0,i,j,len,l=strlen(gmai);
 	
-	if(l>7 && l<32)
+	if(l>13 && l<32)
 	{
 		len=l-10;
 		
@@ -74,7 +74,7 @@ void gma()
 	}
 	else
 	{
-		printf("Please Enter 7 to 32 Character!!");
+		printf("Please Enter Character!!");
 		goto start;
 	}
 }
@@ -92,14 +92,12 @@ void pas()
 
 	if(l>=8 && l<=32)
 	{
-		if(pass[0]>='A' && pass[0]<='Z')
+		for(i=0; i<l; i++)
 		{
-			ck=1;
-		}
-		else
-		{
-			printf("Password is Not parfact First Tongal Key!!");
-			goto start;
+			if(pass[i]>='A' && pass[i]<='Z')
+			{
+				ck=1;
+			}
 		}
 		if(ck==1)
 		{
@@ -169,6 +167,11 @@ void pas()
 				printf("Password is Not parfact small character!!");
 				goto start;
 			}
+		}
+		else
+		{
+			printf("Password is Not parfact alphabet Ex.(A,B,C,D) Key!!");
+			goto start;
 		}
 	}
 	else
