@@ -15,14 +15,12 @@ void pas()
 
 	if(l>=8 && l<=32)
 	{
-		if(pass[0]>='A' && pass[0]<='Z')
+		for(i=0; i<l; i++)
 		{
-			ck=1;
-		}
-		else
-		{
-			printf("Password is Not parfact First Tongal Key!!");
-			goto start;
+			if(pass[i]>='A' && pass[i]<='Z')
+			{
+				ck=1;
+			}
 		}
 		if(ck==1)
 		{
@@ -92,6 +90,11 @@ void pas()
 				printf("Password is Not parfact small character!!");
 				goto start;
 			}
+		}
+		else
+		{
+			printf("Password is Not parfact alphabet Ex.(A,B,C,D) Key!!");
+			goto start;
 		}
 	}
 	else
