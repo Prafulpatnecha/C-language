@@ -14,22 +14,29 @@ void main()
 	{
 		for (b=2; b<=i ;b++)
 		{
-			printf(" - ");
+			printf("  - ");
 		}
 		for(j=i; j<=p; j++)
 		{
-			if(o!=65)
-			{
-				printf(" %d",o);
-				o=o+k;
-				k++;
+			if(o>0 && o<10)
+			{	
+				printf("  %d ",o);
 			}
+			else
+			{
+				if(o!=65)
+				{
+					printf(" %d ",o);
+				}
+			}
+			o=o+k;
+			k++;
 		}
 		k=k-3;
 		o=o-2;
 		for(s=1; s<=a; s++)
 		{
-			printf(" %d",o);
+			printf(" %d ",o);
 			k--;
 			o=o+k;
 		}
