@@ -33,5 +33,4 @@ void main()
 		}
 	}
 	puts(a);
-	
 }
