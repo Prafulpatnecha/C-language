@@ -31,7 +31,6 @@ int rocky()
 	int rocky=10+des(part1(),part2(),part3());
 	return rocky;
 }
-
 void main()
 {
 	printf("%d",rocky());
