@@ -7,7 +7,7 @@ void e(int len,char gmail[38])
 	int ck=0;
 	for(i=0; i<len-10; i++)
 	{
-//	32–47 / 58–64 / 91–96 / 123–126 --> Ascii Value Special Characters
+//	32â€“47 / 58â€“64 / 91â€“96 / 123â€“126 --> Ascii Value Special Characters
 		if(gmail[i]>='A' && gmail[i]<='Z')
 		{
 			ck=2;
@@ -81,17 +81,16 @@ void gmail()
 //--------------------------------Password------------------------------------------------------------------------------------------------------------------------
 void number(int k,int l,char pass[32])
 {
-	int i;
+	int i,ck=0;
 	for(i=0; i<l; i++)
 	{
 		if(pass[i]>=48 && pass[i]<=57)
 		{
-			goto st;
+			ck=1;
 		}
 	}
-	if(i==100)
+	if(ck==1)
 	{
-		st:
 		printf("Your Password Is Perfect");
 	}
 	else
@@ -106,7 +105,7 @@ void specialchar(int k,int l,char pass[32])
 	int i,ck=10;
 	for(i=0; i<l; i++)
 	{
-//		32–47 / 58–64 / 91–96 / 123–126
+//		32â€“47 / 58â€“64 / 91â€“96 / 123â€“126
 		if(pass[i]>=33 && pass[i]<=47 || pass[i]>=58 && pass[i]<=64 || pass[i]>=91 && pass[i]<=96 || pass[i]>=123 && pass[i]<=126)
 		{
 			ck=0;
