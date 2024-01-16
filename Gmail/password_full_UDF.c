@@ -19,7 +19,7 @@ void number(int k,int l,char pass[32])
 	else
 	{
 		printf("Please Enter any One Digit!!\n");
-		main(k);
+		main();
 	}
 }
 
