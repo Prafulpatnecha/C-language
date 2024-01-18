@@ -24,7 +24,7 @@ void e(int len,char gmail[38])
 	else
 	{
 		printf("Gmail Is Not parfact Does Not Allow Upper Case Characters!! And Special Characters !!\n");
-		main();
+		gmail12();
 	}
 }
 
@@ -48,7 +48,7 @@ void h(int le,char gm[38])
 	else
 	{
 		printf("Please Check !!@gmail.com!!\n");
-		main();
+		gmail12();
 	}
 }
 
@@ -61,7 +61,7 @@ void c(int le,char gma[38])
     else
     {
         printf("Please Enter 12 TO UP AND 38 To Low Character!!\n");
-        main();
+        gmail12();
     }
 }
 
@@ -74,12 +74,12 @@ void user()
     c(len,g);
 }
 
-void gmail()
+void gmail12()
 {
     user();
 }                  
 //--------------------------------Password------------------------------------------------------------------------------------------------------------------------
-void number(int k,int l,char pass[32])
+void number(int l,char pass[32])
 {
 	int i,ck=0;
 	for(i=0; i<l; i++)
@@ -96,11 +96,11 @@ void number(int k,int l,char pass[32])
 	else
 	{
 		printf("Please Enter any One Digit!!\n");
-		main(k);
+		pass12();
 	}
 }
 
-void specialchar(int k,int l,char pass[32])
+void specialchar(int l,char pass[32])
 {
 	int i,ck=10;
 	for(i=0; i<l; i++)
@@ -122,22 +122,22 @@ void specialchar(int k,int l,char pass[32])
 		}
 		if(ck==0)
 		{
-			number(k,l,pass);
+			number(l,pass);
 		}
 		else
 		{
 			printf("Please Check Space Is Not Allow!!\n");
-			main(k);
+			pass12();
 		}
 	}
 	else
 	{
 		printf("Please Enter any One Special Characters!!\n");
-		main(k);
+		pass12();
 	}
 }
 
-void uppercase(int k,int l,char pass[32])
+void uppercase(int l,char pass[32])
 {
 	int i;
 	for(i=0; i<l; i++)
@@ -150,16 +150,16 @@ void uppercase(int k,int l,char pass[32])
 	if(i==100)
 	{
 		st:
-		specialchar(k,l,pass);
+		specialchar(l,pass);
 	}
 	else
 	{
 		printf("Please Enter any One Upper Case!!\n");
-		main(k);
+		pass12();
 	}
 }
 
-void lowercase(int le,char pas[32],int k)
+void lowercase(int le,char pas[32])
 {
 	int i;
 	for(i=0; i<le; i++)
@@ -172,30 +172,29 @@ void lowercase(int le,char pas[32],int k)
 	if(i==100)
 	{
 		st:
-		uppercase(k,le,pas);
+		uppercase(le,pas);
 	}
 	else
 	{
 		printf("Please Enter any One Lower Case!!\n");
-		main(k);
+		pass12();
 	}
 }
 
 void passcheck(char pas[32],int len)
 {
-	int k=5;
 	if(len>8 && len<32)
 	{
-		lowercase(len,pas,k);
+		lowercase(len,pas);
 	}
 	else
 	{
 		printf("Please Enter Minimum 8!! And Maximum 32!!\n");
-		main(k);
+		pass12();
 	}
 }
 
-void pass()
+void pass12()
 {
 	char password[32];
 	printf("Enter Your Gmail Password : ");
@@ -204,18 +203,13 @@ void pass()
 	passcheck(password,len);
 }
 
-int main(int s)
+void main()
 {
+	int s;
 	if(s!=5)
 	{
-		gmail();
+		gmail12();
 	}
-	pass();
-	return 0;
+	s=5;
+	pass12();
 }
-//idea for gamil
-//	if(s!=5)
-//	{
-//		printf("ok");
-//		pass();
-//	}
